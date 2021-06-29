@@ -1,24 +1,3 @@
 {
-  "teachers": [
-    {
-      "id": "1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/56804909?v=4",
-      "name": "Sara",
-      "birth": 1002672000000,
-      "degree": "doctorate",
-      "subjects": "CSS, HTML5",
-      "classType": "In-person",
-      "created_at": 1624910994392
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://avatars.githubusercontent.com/u/56804909?v=4",
-      "name": "Sara",
-      "birth": 1286668800000,
-      "degree": "highschool",
-      "subjects": "PHP, CSS, HTML5",
-      "classType": "In-person",
-      "created_at": 1624924796523
-    }
-  ]
+  "teachers": []
 }
