@@ -58,3 +58,23 @@ exports.post = function (req, res) {
         return res.redirect("/teachers")
     })
 }
+
+
+//update
+exports.edit = function (req, res) {
+    // req.params.id = /:id
+    const { id } = req.params
+
+    const foundTeacher = data.teachers.find(function(teacher){
+        return teacher.id == id
+    })
+
+    if (!foundTeacher) return res.send('teacher not found!')
+    
+    const teacher = {
+        ...foundTeacher,
+        birth: date(foundTeacher.birth)
+    }
+    return res.render('teacher/edit', { teacher })
+
+}
