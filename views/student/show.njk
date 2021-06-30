@@ -5,46 +5,37 @@
 <div class="card">
     <section 
     class="avatar" 
-    style="background: url({{ teacher.avatar_url }}) no-repeat center center / cover"></section>
+    style="background: url({{ student.avatar_url }}) no-repeat center center / cover"></section>
     <section class="details">
 
         <h3>Details</h3>
 
         <div class="item">
             <div>Name</div>
-            <div>{{ teacher.name }}</div>
+            <div>{{ student.name }}</div>
+        </div>
+
+        <div class="item">
+            <div>Email</div>
+            <div>{{ student.email }}</div>
         </div>
 
         <div class="item">
             <div>Age</div>
-            <div>{{ teacher.age }}</div>
+            <div>{{ student.age }} years</div>
         </div>
 
         <div class="item">
             <div>Education level</div>
-            <div>{{ teacher.degree }}</div>
-        </div>
-
-        <div class="item">
-            <div>Class type</div>
-            <div>{{ teacher.classType }}</div>
-        </div>
-
-        <div class="item">
-            <div>Subjects</div>
-            <div>
-                {% for subject in teacher.subjects %}
-                <span>{{ subject }}</span>
-                {% endfor %}
-            </div>
+            <div>Grade {{ student.grade }}</div>
         </div>
 
         <div class="item">
             <div>Since</div>
-            <div>{{ teacher.created_at }}</div>
+            <div>{{ student.created_at }}</div>
         </div>
 
-        <a class="button" href="/teachers/{{ teacher.id }}/edit">Edit</a>
+        <a class="button" href="/students/{{ student.id }}/edit">Edit</a>
     </section>
 </div>
 

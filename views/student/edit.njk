@@ -4,24 +4,25 @@
 <div class="card">
     <section 
     class="avatar" 
-    style="background: url({{ teacher.avatar_url }}) no-repeat center center / cover">
+    style="background: url({{ student.avatar_url }}) no-repeat center center / cover">
     </section>
     <section class="details">
-        <form action="/teachers?_method=PUT"method="POST">
+        <form action="/students?_method=PUT"method="POST">
 
         <h3>Teacher edit</h3>
 
-        {% include 'teacher/fields.njk' %}
+        {% include 'student/fields.njk' %}
 
-        <input type="hidden" name="id" value="{{ teacher.id }}">
+        <input type="hidden" name="id" value="{{ student.id }}">
         
         </form>
-        <form id="form-delete" action="/teachers?_method=DELETE" method="POST">
-            <input type="hidden" name="id" value="{{ teacher.id }}">
+        <form id="form-delete" action="/students?_method=DELETE" method="POST">
+            <input type="hidden" name="id" value="{{ student.id }}">
             <button type="submit">Deletar</button>
         </form>
     </section>
 </div>
+{% include 'notifications/confirmDelete.njk' %}
 
 {% endblock content %}
 
