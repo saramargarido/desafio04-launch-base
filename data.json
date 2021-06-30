@@ -1,3 +1,15 @@
 {
-  "teachers": []
+  "students": [],
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://avatars.githubusercontent.com/u/56804909?v=4",
+      "name": "Sara",
+      "birth": 1286668800000,
+      "degree": "highschool",
+      "subjects": "JavaScript, PHP, CSS, HTML5",
+      "classType": "Online",
+      "created_at": 1625018531586
+    }
+  ]
 }

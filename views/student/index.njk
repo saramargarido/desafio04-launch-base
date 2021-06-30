@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="card table-container">
-    {% if teachers != '' %}
+    {% if students != '' %}
     <table width="100%">
         <thead>
             <tr>
@@ -13,15 +13,15 @@
             </tr>
         </thead>
         <tbody>
-            {% for teacher in teachers %}
+            {% for student in students %}
             <tr>
                 <td>
-                    <span style="background-image: url({{ teacher.avatar_url }})"></span>
-                    {{ teacher.name }}
+                    <span style="background-image: url({{ student.avatar_url }})"></span>
+                    {{ student.name }}
                 </td>
-                <td>{{ teacher.subjects }}</td>
+                <td>{{ student.subjects }}</td>
                 <td>
-                    <a href="/teachers/{{ teacher.id }}">show</a>
+                    <a href="/students/{{ student.id }}">show</a>
                 </td>
             </tr>
             {% endfor %}
@@ -32,7 +32,7 @@
         <p>
         There are no registers yet.
         </p>
-        <a href="/teachers/create">Register now!</a>
+        <a href="/students/create">Register now!</a>
     </div>
     {% endif %}
 </div>
